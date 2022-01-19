@@ -1,4 +1,4 @@
-export type addComment = {
+export type AddComment = {
   fullName: string;
   email: string;
   createdAt: string;
