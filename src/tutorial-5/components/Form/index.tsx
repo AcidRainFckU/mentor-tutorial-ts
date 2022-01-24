@@ -1,6 +1,8 @@
+import React from "react";
 import styles from "./Form.module.scss";
 
-function Form(props: { onSubmit: any; register: any }) {
+type Props = { onSubmit: () => void; register: any };
+const Form: React.FC<Props> = (props) => {
   return (
     <form className={styles.form} id="form" onSubmit={props.onSubmit}>
       <h1>Обратная связь:</h1>
@@ -27,6 +29,6 @@ function Form(props: { onSubmit: any; register: any }) {
       <input className={styles.button} type="submit" value="Отправить" />
     </form>
   );
-}
+};
 
 export default Form;
