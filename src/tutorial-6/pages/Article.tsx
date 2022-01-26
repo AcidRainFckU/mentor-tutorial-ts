@@ -1,11 +1,10 @@
-import React from "react";
+import { useParams, Link } from "react-router-dom";
 
-type Props = { id: string };
-
-const Article: React.FC<Props> = ({ id }) => {
+const Article = () => {
+  let { articleId } = useParams();
   return (
     <div>
-      <h1>Статья №{id}</h1>
+      <h1>Статья №{articleId}</h1>
 
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
@@ -14,9 +13,9 @@ const Article: React.FC<Props> = ({ id }) => {
         rem!
       </p>
 
-      <a href="/">
+      <Link to="/">
         <button>Назад</button>
-      </a>
+      </Link>
     </div>
   );
 };
