@@ -37,9 +37,9 @@ const App = () => {
     setStatus(true);
     try {
       const { data } = await axios.get(
-        `https://61f5353b62f1e300173c404c.mockapi.io/${loginParam.get("login")}`
+        `https://api.github.com/users/${loginParam.get("login")}`
       );
-      serProfileData(data[0]);
+      serProfileData(data);
     } catch (e) {
       serProfileData(null);
     } finally {
