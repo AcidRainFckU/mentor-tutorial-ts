@@ -11,4 +11,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  * {
+    margin: 5px 0;
+    max-width: 150px;
+  }
 }

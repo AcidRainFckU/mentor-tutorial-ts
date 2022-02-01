@@ -1,12 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2016",
-    "lib": [
-      "es5", "es6",
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["es5", "es6", "dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -21,8 +16,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": [
-    "src"
-  ]
-  
+  "include": ["src", "server.js", "index.d.ts"]
 }

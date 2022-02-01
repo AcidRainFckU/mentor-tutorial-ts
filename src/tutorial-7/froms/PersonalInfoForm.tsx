@@ -43,6 +43,7 @@ const PersonalInfoForm: React.FC<Props> = ({ nextStep, setFormValues }) => {
     nextStep("step2");
     reset();
   };
+
   return (
     <form
       className="form-container"
