@@ -11,18 +11,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   .App {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    .text-field {
-      margin: 10px;
-      max-width: 300px;
-    }
-    .button {
-      margin: 0 5px;
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      .text-field {
+        margin: 10px;
+        max-width: 300px;
+      }
+      .button {
+        margin: 0 5px;
+      }
     }
   }
 }
