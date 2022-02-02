@@ -21,25 +21,25 @@ type Profile = {
 
 const App = () => {
   const [profileData, serProfileData] = useState<Profile | null>(); //ХРАНИТ ДАННЫЕ
-  const [login, setLogin] = useState<string>(); //ХРАНИТ ЛОГИН АККАУНТА
+  // const [login, setLogin] = useState<string>(); //ХРАНИТ ЛОГИН АККАУНТА
   const [status, setStatus] = useState<boolean>(false); //СТАТУС ДЛЯ БЛОКИРОВКИ КНОПКИ
 
   const [loginParam, setLoginParam] = useSearchParams(); //URL
 
-  const handleGetUser = (e: FormEvent<HTMLFormElement>) => {
-    //ФУНКЦИЯ ДЛЯ ФОРМЫ, ДОБАЛЯЕТ ЛОГИН
-    e.preventDefault();
-    setLoginParam({ login: `${login}` });
-  };
+  // const handleGetUser = (e: FormEvent<HTMLFormElement>) => {
+  //   //ФУНКЦИЯ ДЛЯ ФОРМЫ, ДОБАЛЯЕТ ЛОГИН
+  //   e.preventDefault();
+  //   setLoginParam({ login: `${login}` });
+  // };
 
   async function findUser() {
     //ЗАПРОС ДАННЫХ
     setStatus(true);
     try {
       const { data } = await axios.get(
-        `https://61f5353b62f1e300173c404c.mockapi.io/${loginParam.get("login")}`
+        `https://api.github.com/users/${loginParam.get("login")}`
       );
-      serProfileData(data[0]);
+      serProfileData(data);
     } catch (e) {
       serProfileData(null);
     } finally {
@@ -57,9 +57,9 @@ const App = () => {
   return (
     <div className="app-container">
       <Form
-        setLogin={setLogin}
+        // setLogin={setLogin}
         status={status}
-        handleGetUser={handleGetUser}
+        // handleGetUser={handleGetUser}
         setLoginParam={setLoginParam}
       />
       {loginParam.get("login") &&

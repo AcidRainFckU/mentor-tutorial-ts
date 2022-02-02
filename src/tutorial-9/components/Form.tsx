@@ -3,8 +3,8 @@ import { debounce } from "lodash";
 
 type Props = {
   status: boolean;
-  setLogin: any;
-  handleGetUser: any;
+  // setLogin: any;
+  // handleGetUser: any;
   setLoginParam: any;
   // handleGetUser: () => void; \\\ВЫДАЕТ ОШИБКУ В APP.tsx
   // setLoginParam: (login: object) => void; \\\ВЫДАЕТ КАКОЙ-ТО ПИЗДЕЦ В APP.tsx
@@ -12,17 +12,16 @@ type Props = {
 };
 
 const Form: React.FC<Props> = ({
-  setLogin,
+  // setLogin,
   status,
-  handleGetUser,
+  // handleGetUser,
   setLoginParam,
 }) => {
   const findUser = debounce((e: any) => {
-    setLogin(e.target.value);
     setLoginParam({ login: `${e.target.value}` });
   }, 500);
   return (
-    <form className="app-form" onSubmit={handleGetUser}>
+    <form className="app-form">
       <input
         type="text"
         className="app-input"
