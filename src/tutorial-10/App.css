@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.05);
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.full-post {
+  background-color: #fff;
+  padding: 30px;
+}
+
+.not-found {
+  width: 100%;
+  display: flex;
+}
+
+.not-found-404 {
+  font-size: 32px;
+  margin: auto;
+}
